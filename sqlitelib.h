@@ -141,7 +141,7 @@ class Iterator {
   template <std::size_t RestSize = sizeof...(Rest),
             typename std::enable_if<(RestSize == 0), int>::type = 0>
   value_type operator*() const {
-    return get_column_value<T>(stmt_, 0);
+    return detail::get_column_value<T>(stmt_, 0);
   }
 
   template <std::size_t RestSize = sizeof...(Rest),
