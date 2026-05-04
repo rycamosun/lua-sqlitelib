@@ -15,4 +15,5 @@ jobs:
         run: |
           git remote add codeberg https://codeberg.org/ehatch/lua-sqlitelib.git
           git fetch codeberg --prune
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/rycamosun/lua-sqlitelib.git
           git push origin --mirror
